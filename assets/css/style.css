@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,700;0,800;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 75%;
+}
+.navbar .button{
+    color: #ff724c;
+}
+.navbar .nav-link.active{
+    color: #313335;
+    font-size: 15px;
+}
+.navbar .nav-link{
+    color: #818181;
+    margin-right: 15px;
+    font-weight: 400;
+    position: relative;
+    padding: 10px 0;
+}
+.navbar .nav-link::before{
+    content:"";
+    position: absolute;
+    background-color: #ff724c;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: width 1s;
+}
+.navbar .nav-link:hover::before{
+    width: 100%;
+}
+.navbar .nav-link.active::before{
+    width: 100%;
+}
+.button{
+    font-size: 14px;
+}
+.button i{
+    transition: 1s;
+}
+.button:hover i{
+    background-color: #313335 !important;
+    color: white !important;
+    transform: rotate(360deg);
+}
+/*end navbar*/
+/*start header*/
+.header{
+    background-image: url("../../assets/images/introbg5.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header-content span{
+    font-size: 23px;
+    font-weight: 500;
+    color: #313335;
+    margin-right: 3px;
+    font-family: 'Raleway';
+}
+.header-content p{
+    font-size: 23px;
+    font-weight: 500;
+    color: #313335;
+    margin-right: 3px;
+    font-family: 'Raleway';
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: auto;
+    border-right: 1px solid;
+    animation: typing 3s both infinite alternate-reverse steps(28), blink 0.7s infinite
+}
+@keyframes typing {
+    from{
+        width:0;
+    }
+    to{
+        width: 314px;
+    }
+}
+@keyframes blink {
+    from{
+        border-color: rgba(0,0,0,0);
+    }
+    to{
+        border-color: rgba(0,0,0,0.7);
+    }
+}
+h1, h2{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Dosis';
+}
+h2{
+    font-size: 50px;
+}
+.social .icon i {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #3b5999;
+    color: #3b5999;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.social .icon:i:hover{
+    transform: rotate(360deg);
+}
+.social .icon:nth-of-type(1) i{
+    color: #3b5999;;
+    border-color: #3b5999;;
+}
+.social .icon:nth-of-type(2) i{
+    color: #ea4c89;
+    border-color: #ea4c89;
+}
+.social .icon:nth-of-type(3) i{
+    color: #1769ff;
+    border-color: #1769ff; 
+}
+.social .icon:nth-of-type(4) i{
+    color: #0077b5;
+    border-color: #0077b5;  
+}
+.social .icon:nth-of-type(5) i{
+    color: #dd4b39;
+    border-color:#dd4b39; 
+}
+.social .icon:nth-of-type(2) i:hover{
+    background-color: #ea4c89;
+    color: white;
+}
+.social .icon:nth-of-type(1) i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: #3b5999;;
+}
+.social .icon:nth-of-type(2) i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: #ea4c89;
+}
+.social .icon:nth-of-type(3) i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: #1769ff;
+}
+.social .icon:nth-of-type(4) i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: #0077b5;
+}
+.social .icon:nth-of-type(5) i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: #dd4b39;
+}
+/*start about*/
+.about .container > .row{
+    width: 90%;
+    margin: auto;
+}
+.about .about-content{
+    background-color: #4e4e4e;;
+}
+.description{
+    background-color: #ff7a57;
+}
+.about .title span{
+    position: absolute;
+    top: -30px;
+    left: -10px;
+}
+.about .description p{
+    font-size: 14px;
+}
+.eye-icon{
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    font-size: 13px;
+}
+.description a span{
+    font-size: 13px;
+    color: #3b3b3b;
+}
+.description a:hover i{
+    color: #ff7a57 !important;
+}
+/*start services*/
+.title span:not(.about .title span, .contact .title span){
+    border-color: #ff724c !important;
+}
+h3{
+    font-size: 18px;
+    color: #3b3b3b;
+}
+.service-item{
+    position: relative;
+}
+.service-item p{
+    font-size: 13px;
+    color: #818181;
+}
+.service-item::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: #f3f3f3;
+    transition: .5s;
+}
+.service-item:hover::after{
+    bottom: 0;
+}
+/*start portfolio*/
+.portfolio{
+    background-color: #f3f3f3;
+}
+.portfolio .nav-link{
+    font-size: 14px;
+    color: #3b3b3b !important;
+    font-family: 'Raleway';
+}
+.portfolio .nav-link.active{
+    background-color: #ff724c;
+    color: white;
+}
+.portfolio .nav-link.all{
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.portfolio .nav-link.active:hover{
+    border-color: #ff724c;
+}
+.portfolio .nav-link{
+    padding: 5px 8px;
+    font-size: 13px;
+    margin-right: 15px;
+    border: 1px solid #5f5f5f;
+}
+.portfolio .nav-link:hover{
+    border-color: #5f5f5f;
+}
+.overlay{
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    transform: scaleY(0);
+    transition: .5s;
+}
+.overlay i {
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    background-color: #ff724c;
+    border-radius: 50%;
+    transform: scaleY(0);
+    transition: .5s .2s;
+}
+.portfoilo-item:hover .overlay{
+    transform: scaleY(1);
+}
+.portfoilo-item:hover .overlay i{
+    transform: scale(1) rotate(360deg) ;
+
+}
+.overlay i:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: #ff724c;
+}
+.info{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+}
+.portfoilo-item:hover .info{
+    bottom: 0;
+    opacity: 1;
+}
+.info .desc p{
+    font-size: 14px;
+    color: #4c4c4c;
+}
+.info .desc h3{
+    font-size: 15px;
+}
+.info i{
+    color: #ff724c;
+}
+/*start bio*/
+.bio .head i{
+    width: 35px;
+    height: 35px;
+    background-color: #ff7a57;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+.bio .head i:hover{
+    background-color: #f3f3f3;
+    color: #ff724c;
+}
+h4, .item p{
+    font-size: 14px;
+    color: #3b3b3b;
+}
+.colored{
+    color:#ff724c;
+    font-size: 14px;
+}
+.head::before{
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 2.2rem;
+    background-color: #3b3b3b;
+    width: 1px;
+    height: 100%;
+}
+.bio .desc .item:not(:last-of-type)::before{
+    content: '';
+    position: absolute;
+    left: 2px;
+    top:0;
+    background-color: #3b3b3b;
+    width: 1px;
+    height: 100%;
+}
+.bio .desc .item::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ff724c;
+    left: -2px;
+    top: 1px;
+    position: absolute;
+    background-color: white;
+}
+.bio .desc .item:hover::after{
+    background-color: #ff724c;
+}
+.bar{
+    background-color: #3b3b3b;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    position: relative;
+}
+.bar::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 6px;
+    left: 0;
+    top: 0;
+    background-color: #ff724c;
+    border-radius: 10px;
+}
+.item[val='70'] .bar::after{
+    width: 70%;
+}
+.item[val='55'] .bar::after{
+    width: 55%;
+}
+.item[val='80'] h4{
+    width: 80%;
+}
+.item[val='70'] h4{
+    width: 70%;
+}
+.item[val='55'] h4{
+    width: 55%;
+}
+/*start resume*/
+.resume{
+    background-image: 
+    linear-gradient(rgba(59,59,59,0.75),rgba(59,59,59,0.75))
+    ,url('../images/brandbg.png');
+    background-size: cover;
+
+}
+.resume p{
+    font-size: 32px;
+    font-family:'Dosis', 'san serif';
+    margin-bottom: 2rem;
+}
+.resume a.btn{
+    border: 1px solid white;
+    color: white;
+    font-size: 13px;
+
+}
+.resume a.btn:hover{
+    background-color: #ff724c;
+    color: #ff724c;
+}
+/* start testimonials */
+.testimonials h3{
+    color: #313131;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+.testimonials  p{
+    color: #5b5b5b;
+    font-size: 15px;
+}
+.quote span{
+    color: #5b5b5b;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-style: italic;
+    margin-bottom: 40px
+}
+.quote:hover{
+    background-color: #5b5b5b;
+    color: #f3f3f3;
+}
+.quote:hover span{
+    color: #f3f3f3
+}
+.carousel-indicators{
+    margin-bottom: 0;
+    bottom: -35px;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ff724c;
+}
+.carousel-indicators  .active{
+    background-color: #ff724c;
+}
+/*start contact*/
+.contact{
+    background-image: 
+    linear-gradient(rgba(255, 114, 76,0.85),rgba(255, 114, 76,0.85))
+    ,url('../images/contactbg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contact .container p{
+    font-size: 15px;
+    width: 65%;
+    margin: auto;
+    font-weight: 300;
+}
+input:focus, textarea:focus{
+    box-shadow: none !important;
+    border: 1px solid white !important;
+}
+::placeholder{
+    color: white !important;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.contact a{
+    color: #313131;
+    font-size: 13px;
+}
+.contact .container a:hover i{
+    color:#ff724c !important;
+}
+/*start map */
+.map .container{
+    position: relative;
+}
+.map .contact-info{
+    background-color: #282828;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom:0;
+}
+.contact-info i{
+    background-color: white;
+    color: #ff724c;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.contact-info i:hover{
+    background-color: #ff724c;
+    transform: rotate(360deg);
+    color: white
+}
+.contact-info h3{
+    font-size: 15px;
+}
+.contact-info a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+.contact-info span{
+    font-size: 14px;
+}
+/*start footer*/
+footer p.copy{
+    color:#818181;
+    font-size: 14px;
+}
+footer p{
+    margin: 0;
+}
+footer p:last-of-type{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
