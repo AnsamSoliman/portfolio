@@ -1,8 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,700;0,800;0,900;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+:root{
+    --main-color: #ff724c;
+}
 body{
     font-family: 'Roboto', sans-serif;
+}
+.theme{
+    position: fixed;
+    top: 40%;
+    left:0;
+    z-index: 99999999;
+}
+.theme i {
+    background-color: var(--main-color);
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+.options{
+    padding: 20px;
+    width: 160px;
+    background-color: white;
+    border: 1px solid rgb(197, 197, 197);
+    border-bottom-right-radius: 10px;
+}
+.options li{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .loader {
     width: 48px;
@@ -79,14 +111,15 @@ body{
 .top i{
     border-radius: 50%;
     padding: 10px 12px;
-    background-color: #d74d27;
+    background-color: rgb(52,52,52);
+    color: var(--main-color)
 }
 .new-bg-color{
     background-color: #f3f3f3 !important;
     box-shadow: 1px 2px 10px #222;
 }
 .navbar .button{
-    background-color: #ff724c;
+    background-color: var(--main-color);
 }
 .navbar .nav-link.active{
     color: #313335;
@@ -102,7 +135,7 @@ body{
 .navbar .nav-link::before{
     content:"";
     position: absolute;
-    background-color: #ff724c;
+    background-color: var(--main-color);
     bottom: 0;
     left: 0;
     height: 2px;
@@ -272,7 +305,7 @@ h2{
 }
 /*start services*/
 .title span:not(.about .title span, .contact .title span){
-    border-color: #ff724c !important;
+    border-color: var(--main-color) !important;
 }
 h3{
     font-size: 18px;
@@ -310,7 +343,7 @@ h3{
     font-family: 'Raleway';
 }
 .portfolio .nav-link.active{
-    background-color: #ff724c;
+    background-color: var(--main-color);
     color: white;
 }
 .portfolio .nav-link.all{
@@ -318,7 +351,7 @@ h3{
     padding-right: 14px;
 }
 .portfolio .nav-link.active:hover{
-    border-color: #ff724c;
+    border-color: var(--main-color);
 }
 .portfolio .nav-link{
     padding: 5px 8px;
@@ -343,7 +376,7 @@ h3{
     color: white;
     padding: 12px;
     font-size: 15px;
-    background-color: #ff724c;
+    background-color: var(--main-color);
     border-radius: 50%;
     transform: scaleY(0);
     transition: .5s .2s;
@@ -358,7 +391,7 @@ h3{
 .overlay i:hover{
     background-color: transparent;
     border: 1px solid white;
-    color: #ff724c;
+    color: var(--main-color);
 }
 .info{
     position: absolute;
@@ -379,7 +412,7 @@ h3{
     font-size: 15px;
 }
 .info i{
-    color: #ff724c;
+    color: var(--main-color);
 }
 /*start bio*/
 .bio .head i{
@@ -393,14 +426,14 @@ h3{
 }
 .bio .head i:hover{
     background-color: #f3f3f3;
-    color: #ff724c;
+    color: var(--main-color);
 }
 h4, .item p{
     font-size: 14px;
     color: #3b3b3b;
 }
 .colored{
-    color:#ff724c;
+    color:var(--main-color);
     font-size: 14px;
 }
 .head::before{
@@ -426,14 +459,14 @@ h4, .item p{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid #ff724c;
+    border: 1px solid var(--main-color);
     left: -2px;
     top: 1px;
     position: absolute;
     background-color: white;
 }
 .bio .desc .item:hover::after{
-    background-color: #ff724c;
+    background-color: var(--main-color);
 }
 .bar{
     background-color: #3b3b3b;
@@ -449,7 +482,7 @@ h4, .item p{
     height: 6px;
     left: 0;
     top: 0;
-    background-color: #ff724c;
+    background-color: var(--main-color);
     border-radius: 10px;
 }
 .item[val='70'] .bar::after{
@@ -487,8 +520,8 @@ h4, .item p{
 
 }
 .resume a.btn:hover{
-    background-color: #ff724c;
-    color: #ff724c;
+    background-color: var(--main-color);
+    color: var(--main-color);
 }
 /* start testimonials */
 .testimonials h3{
@@ -523,10 +556,10 @@ h4, .item p{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid #ff724c;
+    border: 1px solid var(--main-color);
 }
 .carousel-indicators  .active{
-    background-color: #ff724c;
+    background-color: var(--main-color);
 }
 /*start contact*/
 .contact{
@@ -556,7 +589,7 @@ input:focus, textarea:focus{
     font-size: 13px;
 }
 .contact .container a:hover i{
-    color:#ff724c !important;
+    color:var(--main-color) !important;
 }
 /*start map */
 .map .container{
@@ -571,7 +604,7 @@ input:focus, textarea:focus{
 }
 .contact-info i{
     background-color: white;
-    color: #ff724c;
+    color: var(--main-color);
     width: 30px;
     height: 30px;
     text-align: center;
@@ -580,7 +613,7 @@ input:focus, textarea:focus{
     transition: 1s;
 }
 .contact-info i:hover{
-    background-color: #ff724c;
+    background-color: var(--main-color);
     transform: rotate(360deg);
     color: white
 }
